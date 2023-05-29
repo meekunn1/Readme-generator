@@ -7,7 +7,7 @@ const fs = require('fs');
 const questions = [
     {
         type: 'input',
-        name: 'title',
+        name: 'fileName',
         message: 'What is your project Title?',
     },
     {
@@ -37,7 +37,7 @@ const questions = [
     },
     {
         type: 'list',
-        name: 'license',
+        name: 'licenseBadge', //splaceholder for test
         message: 'Please specify instructions for testing your project.',
         choices: ['none', 'Apache 2.0', 'GNU v3.0', 'MIT'],
     },
@@ -55,12 +55,24 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    return '
-    '
+    try{
+        fs.writeFileSync('README.md', generateMarkdown(data));
+        console.log('README.md have been successfuly created.');
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+    const answers = await inquirer.prompt(questions);
+    const READMEcontent = generateMarkdown(answers);
+    console.log(READMEcontent);
+
+    //writeToFile(fileName, data);
+
+
+}
 
 // Function call to initialize app
 init();
