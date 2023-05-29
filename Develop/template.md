@@ -26,7 +26,9 @@ Sample text for Usage content.
 
 ## License
 
-![license](https://img.shields.io/badge/license-Apache%202.0-orange)
+![license](https://img.shields.io/badge/License-Apache%202.0-orange)
+![license](https://img.shields.io/badge/License-GNU%20v3.0-red)
+![license](https://img.shields.io/badge/License-MIT-green)
 
 ## How to Contribute
 
