@@ -37,7 +37,7 @@ const questions = [
     },
     {
         type: 'list',
-        name: 'licenseBadge', //splaceholder for test
+        name: 'license', //splaceholder for test
         message: 'Please specify instructions for testing your project.',
         choices: ['none', 'Apache 2.0', 'GNU v3.0', 'MIT'],
     },
