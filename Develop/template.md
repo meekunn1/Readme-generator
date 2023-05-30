@@ -26,9 +26,9 @@ Sample text for Usage content.
 
 ## License
 
-![license](https://img.shields.io/badge/License-Apache%202.0-orange)
-![license](https://img.shields.io/badge/License-GNU%20v3.0-red)
-![license](https://img.shields.io/badge/License-MIT-green)
+[![license](https://img.shields.io/badge/License-Apache%202.0-orange)](https://choosealicense.com/licenses/apache-2.0/)
+[![license](https://img.shields.io/badge/License-GNU%20v3.0-red)](https://choosealicense.com/licenses/gpl-3.0/)
+[![license](https://img.shields.io/badge/License-MIT-green)](https://choosealicense.com/licenses/mit/)
 
 ## How to Contribute
 
