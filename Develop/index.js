@@ -13,7 +13,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please enter the description of your project.',
+        message: 'Please write an description explaining the what, why, and how of your project.',
     },
     {
         type: 'input',
@@ -33,12 +33,12 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Please specify instructions for testing your project.',
+        message: 'Please specify the tests done for this project.',
     },
     {
         type: 'list',
-        name: 'license', //splaceholder for test
-        message: 'Please specify instructions for testing your project.',
+        name: 'license',
+        message: 'Please select the license you used for this project.',
         choices: ['none', 'Apache 2.0', 'GNU v3.0', 'MIT'],
     },
     {
@@ -49,15 +49,15 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Please input your email address.',
+        message: 'What e-mail address should the users reach out for questions?',
     },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     try{
-        fs.writeFileSync(`README_${fileName}.md`, data);
-        console.log(`README_${fileName}.md have been successfuly created.`);
+        fs.writeFileSync(`README_${fileName.trim().toLowerCase().replace(/\s+/g, '-')}.md`, data);
+        console.log(`README_${fileName.trim().toLowerCase().replace(/\s+/g, '-')}.md have been successfuly created.`);
     } catch (err) {
         console.log(err)
     }
@@ -67,7 +67,6 @@ function writeToFile(fileName, data) {
 async function init() {
     const answers = await inquirer.prompt(questions);
     const READMEcontent = generateMarkdown(answers);
-    console.log(READMEcontent);
     writeToFile(answers.fileName, READMEcontent);
 }
 

@@ -2,13 +2,10 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
   const choice = data.license
-  console.log("from renderLicenseBadge " + choice + "\nend")
     if (choice === 'none') {
-      // list.licenseBadge = 
       return``
     }
     else if (choice === 'Apache 2.0') {
-      // list.licenseBadge = 
       return`
 ## License
   
@@ -16,7 +13,6 @@ function renderLicenseBadge(data) {
 `
     }
     else if (choice === 'GNU v3.0') {
-      // list.licenseBadge = 
       return`
 ## License
   
@@ -24,7 +20,6 @@ function renderLicenseBadge(data) {
 `
     }
     else if (choice === 'MIT') {
-      // list.licenseBadge = 
       return`
 ## License
   
@@ -35,8 +30,6 @@ function renderLicenseBadge(data) {
       console.log('error at renderLicenseBadge');
       return
     }
-    // renderLicenseSection(answers);
-    // return console.log("3rd call" + list)
   }
 
 
@@ -60,13 +53,8 @@ function renderLicenseSection(data) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 const list = data
-    console.log(list);
-    console.log(list.license);
-  // {fileName, description, installation, usage, license, contribution, tests, username, email}
   const licenseBadge = renderLicenseBadge(list);
   const licenseSection = renderLicenseSection(list);
-  console.log(licenseBadge);
-  console.log(licenseSection);
   return `# ${list.fileName.trim()}
 
 ## Description
@@ -80,7 +68,7 @@ ${list.description.trim()}
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)${licenseSection}
-  - [How to Contribute](#how-to-contribute)
+  - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
 
@@ -92,7 +80,7 @@ ${list.installation.trim()}
 
 ${list.usage.trim()}
 ${licenseBadge}
-## How to Contribute
+## Contributing
 
 ${list.contribution.trim()}
 
