@@ -67,15 +67,15 @@ const list = data
   const licenseSection = renderLicenseSection(list);
   console.log(licenseBadge);
   console.log(licenseSection);
-  return `# ${list.fileName}
+  return `# ${list.fileName.trim()}
 
 ## Description
 
-${list.description}
+${list.description.trim()}
 
 ## Table of Contents
 
-- [${list.fileName}](#${list.fileName.toLowerCase().replace(/\s+/g, '-')})
+- [${list.fileName.trim()}](#${list.fileName.trim().toLowerCase().replace(/\s+/g, '-')})
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
@@ -86,25 +86,25 @@ ${list.description}
 
 ## Installation
 
-${list.installation}
+${list.installation.trim()}
 
 ## Usage
 
-${list.usage}
+${list.usage.trim()}
 ${licenseBadge}
 ## How to Contribute
 
-${list.contribution}
+${list.contribution.trim()}
 
 ## Tests
 
-${list.tests}
+${list.tests.trim()}
 
 ## Questions
 
-For any questions, please visit my [GitHub profile](https://github.com/${list.username}).
+For any questions, please visit my [GitHub profile](https://github.com/${list.username.trim()}).
 
-For any additinal questions, please contact me through email at: ${list.email}`;
+For any additinal questions, please contact me through email at: ${list.email.trim()}`;
 }
 
 module.exports = generateMarkdown;
