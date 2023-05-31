@@ -67,7 +67,7 @@ function writeToFile(fileName, data) {
 async function init() {
     const answers = await inquirer.prompt(questions);
     const READMEcontent = generateMarkdown(answers);
-    console.log(READMEcontent);
+    // console.log(READMEcontent);
     writeToFile(answers.fileName, READMEcontent);
 }
 

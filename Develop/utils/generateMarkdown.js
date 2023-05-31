@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
   const choice = data.license
-  console.log("from renderLicenseBadge " + choice + "\nend")
+  // console.log("from renderLicenseBadge " + choice + "\nend")
     if (choice === 'none') {
       // list.licenseBadge = 
       return``
@@ -60,13 +60,13 @@ function renderLicenseSection(data) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 const list = data
-    console.log(list);
-    console.log(list.license);
+    // console.log(list);
+    // console.log(list.license);
   // {fileName, description, installation, usage, license, contribution, tests, username, email}
   const licenseBadge = renderLicenseBadge(list);
   const licenseSection = renderLicenseSection(list);
-  console.log(licenseBadge);
-  console.log(licenseSection);
+  // console.log(licenseBadge);
+  // console.log(licenseSection);
   return `# ${list.fileName.trim()}
 
 ## Description
